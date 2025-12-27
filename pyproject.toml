@@ -1,0 +1,22 @@
+[project]
+name = "budget-tracker"
+version = "0.1.0"
+description = "A simple Python budget tracker (API + CLI) for developer learning"
+requires-python = ">=3.8"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "click",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Restrict setuptools package discovery so non-package folders like `sample_data`
+# are not treated as top-level packages. This prevents errors when building
+# editable installs in a flat layout.
+[tool.setuptools.packages.find]
+include = ["budget_tracker*"]
+exclude = ["sample_data*", "tests*"]
