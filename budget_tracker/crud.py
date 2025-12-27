@@ -1,6 +1,5 @@
 from .db import DB
 from .models import TransactionIn
-from typing import List, Dict
 
 # default module-level DB; tests can override
 db = DB()

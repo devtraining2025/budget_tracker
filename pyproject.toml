@@ -20,3 +20,9 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 include = ["budget_tracker*"]
 exclude = ["sample_data*", "tests*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "ruff>=0.14.10",
+]
