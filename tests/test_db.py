@@ -10,7 +10,7 @@ def test_add_and_list_transactions(tmp_path):
     assert added.id is not None
     txs = db.list_transactions()
     assert len(txs) == 1
-    assert txs[0].amount == 12.5
+    assert abs(txs[0].amount - 12.5) < 1e-9
 
 
 def test_summary_by_month():
