@@ -31,4 +31,7 @@ jobs:
       - name: Run Tests
         run: uv run pytest
 
+      - name: Run black formtter check
+        run: uv run black --check .
+
 
