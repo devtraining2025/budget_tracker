@@ -8,6 +8,8 @@ RUN apk add --no-cache gcc musl-dev libffi-dev
 
 # Copy requirements first (better caching)
 COPY requirements.txt .
+COPY pyproject.toml .
+COPY uv.lock . 
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
