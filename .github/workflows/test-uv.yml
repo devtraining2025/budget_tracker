@@ -46,7 +46,7 @@ jobs:
         run: docker tag budget_tracker:latest ${{ secrets.DOCKER_HUB_USERNAME }}/budget_tracker:latest
 
       - name: Push Docker Image
-        run: docker push budget_tracker:latest
+        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/budget_tracker:latest
   
 
 
