@@ -1,0 +1,22 @@
+# I wanted to run 4 containers of budget_tracker app
+
+services:
+  budget_tracker:
+    build: .
+    image: budget_tracker:latest
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8001:9000"
+    depends_on:
+      - sqlite
+
+
+  sqlite:
+    image: nouchka/sqlite3:latest
+    volumes:
+      - ./data:/data
+
+
+# volumes:
+# networks:

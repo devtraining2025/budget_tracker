@@ -24,6 +24,7 @@ exclude = ["sample_data*", "tests*"]
 
 [dependency-groups]
 dev = [
+    "black>=24.8.0",
     "pytest>=8.3.5",
     "ruff>=0.14.10",
 ]
