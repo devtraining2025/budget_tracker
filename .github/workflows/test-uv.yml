@@ -42,6 +42,9 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
+      - name: Tag Docker Image
+        run: docker tag budget_tracker:latest ${{ secrets.DOCKER_HUB_USERNAME }}/budget_tracker:latest
+
       - name: Push Docker Image
         run: docker push budget_tracker:latest
   
