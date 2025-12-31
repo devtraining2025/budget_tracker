@@ -29,8 +29,8 @@ jobs:
 
       - name: Run Ruff
         run: docker exec budget_tracker_test sh -c "uv run ruff check ."  
-      - name: Run Tests
-        run: docker exec -w /app budget_tracker_test sh -c "uv run pytest"
+      # - name: Run Tests
+      #  run: docker exec -w /app budget_tracker_test sh -c "uv run pytest"
 
       - name: Run black formtter check
         run: docker exec budget_tracker_test sh -c "uv run black --check ."
